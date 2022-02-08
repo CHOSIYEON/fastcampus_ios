@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F77302927B2AD7300F92899 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77302827B2AD7300F92899 /* SettingViewController.swift */; };
 		1FF4D97027B0DB62006350F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4D96F27B0DB62006350F4 /* AppDelegate.swift */; };
 		1FF4D97227B0DB62006350F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4D97127B0DB62006350F4 /* SceneDelegate.swift */; };
 		1FF4D97427B0DB62006350F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF4D97327B0DB62006350F4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F77302827B2AD7300F92899 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		1FF4D96C27B0DB62006350F4 /* LEDBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF4D96F27B0DB62006350F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF4D97127B0DB62006350F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				1FF4D97827B0DB63006350F4 /* Assets.xcassets */,
 				1FF4D97A27B0DB63006350F4 /* LaunchScreen.storyboard */,
 				1FF4D97D27B0DB63006350F4 /* Info.plist */,
+				1F77302827B2AD7300F92899 /* SettingViewController.swift */,
 			);
 			path = LEDBoard;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				1FF4D97427B0DB62006350F4 /* ViewController.swift in Sources */,
 				1FF4D97027B0DB62006350F4 /* AppDelegate.swift in Sources */,
 				1FF4D97227B0DB62006350F4 /* SceneDelegate.swift in Sources */,
+				1F77302927B2AD7300F92899 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
