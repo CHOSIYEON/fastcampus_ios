@@ -10,11 +10,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var tasks = [Task]()
+    var tasks = [Task]() {
+        didSet {
+            // tasks 에 일이 추가될때마다 saveTasks() 호출되어 UserDefault 에 값이 저장되게 됨
+            self.saveTasks()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.loadTask()
     }
 
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
@@ -47,6 +54,33 @@ class ViewController: UIViewController {
         })
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func saveTasks() {
+        // 배열에 있는 요소들을 딕셔너리 형태로 저장
+        let data = self.tasks.map {
+            [
+                "title" : $0.title,
+                "done" : $0.done
+            ]
+        }
+        
+        // UserDefault 에 접근가능하게 만듬
+        let userDefaults = UserDefaults.standard
+        // 값 삽입
+        userDefaults.set(data, forKey: "tasks")
+    }
+    
+    func loadTask() {
+        let userDefaults = UserDefaults.standard
+        // 값 가져오기, Any 타입으로 리턴됨 -> 딕셔너리 형태로 캐스팅
+        guard let data = userDefaults.object(forKey: "tasks") as? [[String: Any]] else { return }
+        self.tasks = data.compactMap {
+            guard let title = $0["title"] as? String else { return nil }
+            guard let done = $0["done"] as? Bool else { return nil }
+            
+            return Task(title: title, done: done)
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -66,8 +100,24 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let task = self.tasks[indexPath.row]
         cell.textLabel?.text = task.title
+        
+        if task.done {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+        
         return cell
     }
     
-    
+}
+
+extension ViewController: UITableViewDelegate {
+    // 셀을 선택했을때, 어떤 셀이 선택되었는지 알려주는 메소드
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var task = self.tasks[indexPath.row]
+        task.done = !task.done
+        self.tasks[indexPath.row] = task
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 }
