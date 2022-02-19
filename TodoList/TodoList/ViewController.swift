@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     // weak 가 아닌 strong 으로 연결
     // weak 면 왼쪽 네비게이션 아이템을 done 으로 바꿨을 때, edit 이 메모리에서 해제됨 -> 재사용 불가능
     @IBOutlet var editButton: UIBarButtonItem!
