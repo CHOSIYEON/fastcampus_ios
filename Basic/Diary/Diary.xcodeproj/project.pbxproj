@@ -13,6 +13,11 @@
 		1F742DC727C155B3009E4273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F742DC527C155B3009E4273 /* Main.storyboard */; };
 		1F742DC927C155B5009E4273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F742DC827C155B5009E4273 /* Assets.xcassets */; };
 		1F742DCC27C155B5009E4273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F742DCA27C155B5009E4273 /* LaunchScreen.storyboard */; };
+		1F742DD427C15A7E009E4273 /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F742DD327C15A7E009E4273 /* DiaryCell.swift */; };
+		1F742DD627C15AD6009E4273 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F742DD527C15AD6009E4273 /* StarViewController.swift */; };
+		1F742DD827C15BDE009E4273 /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F742DD727C15BDE009E4273 /* StarCell.swift */; };
+		1F742DDA27C15D7F009E4273 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F742DD927C15D7F009E4273 /* WriteDiaryViewController.swift */; };
+		1F742DDC27C15DD6009E4273 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F742DDB27C15DD6009E4273 /* DiaryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		1F742DC827C155B5009E4273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F742DCB27C155B5009E4273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F742DCD27C155B5009E4273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F742DD327C15A7E009E4273 /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
+		1F742DD527C15AD6009E4273 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		1F742DD727C15BDE009E4273 /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
+		1F742DD927C15D7F009E4273 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		1F742DDB27C15DD6009E4273 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				1F742DC827C155B5009E4273 /* Assets.xcassets */,
 				1F742DCA27C155B5009E4273 /* LaunchScreen.storyboard */,
 				1F742DCD27C155B5009E4273 /* Info.plist */,
+				1F742DD327C15A7E009E4273 /* DiaryCell.swift */,
+				1F742DD527C15AD6009E4273 /* StarViewController.swift */,
+				1F742DD727C15BDE009E4273 /* StarCell.swift */,
+				1F742DD927C15D7F009E4273 /* WriteDiaryViewController.swift */,
+				1F742DDB27C15DD6009E4273 /* DiaryDetailViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -139,8 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F742DC427C155B3009E4273 /* ViewController.swift in Sources */,
+				1F742DDA27C15D7F009E4273 /* WriteDiaryViewController.swift in Sources */,
+				1F742DD827C15BDE009E4273 /* StarCell.swift in Sources */,
 				1F742DC027C155B3009E4273 /* AppDelegate.swift in Sources */,
 				1F742DC227C155B3009E4273 /* SceneDelegate.swift in Sources */,
+				1F742DDC27C15DD6009E4273 /* DiaryDetailViewController.swift in Sources */,
+				1F742DD427C15A7E009E4273 /* DiaryCell.swift in Sources */,
+				1F742DD627C15AD6009E4273 /* StarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
