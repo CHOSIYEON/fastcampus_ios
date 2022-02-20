@@ -77,6 +77,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="JyG-6p-wS5" id="pfB-wJ-Qt7"/>
+                                            <outlet property="titleLabel" destination="Ako-4z-I9J" id="V0L-Kt-15y"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -97,6 +101,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="m1A-I2-dxS" id="Ge3-Zb-c4J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,8 +180,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="eu6-Eq-buX">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="8KD-Hf-JPq"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="8KD-Hf-JPq">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="T1d-GL-jPY" id="kPO-IA-F3L"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="8KD-Hf-JPq" id="Dul-bt-nT2"/>
+                        <outlet property="contentsTextView" destination="9iF-XJ-DHc" id="6n5-6M-b0P"/>
+                        <outlet property="dateTextField" destination="9cL-CU-70C" id="BQ1-kz-IaS"/>
+                        <outlet property="titleTextField" destination="lM0-JH-UAa" id="s7d-qM-ypl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBM-RU-uLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
