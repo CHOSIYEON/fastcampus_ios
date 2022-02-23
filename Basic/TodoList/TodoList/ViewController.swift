@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         didSet {
             // tasks 에 일이 추가될때마다 saveTasks() 호출되어 UserDefault 에 값이 저장되게 됨
             self.saveTasks()
+            print(tasks)
         }
     }
     
